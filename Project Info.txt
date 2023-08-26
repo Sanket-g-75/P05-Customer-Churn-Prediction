@@ -48,6 +48,8 @@
 - Best Hyperparameters represented were n_estimators as 300 and max_depth as 4
 - Updated the parameters accordingly
 
+5.5 Using XGBoost
+- Used XGBoost model as well to test other models 
 
 6. Model Deployment
 6.1 Making a Pickle File
