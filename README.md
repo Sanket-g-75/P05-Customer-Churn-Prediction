@@ -1,50 +1,84 @@
-# Customer Churn Prediction – STAR Report
+# Customer Churn Prediction Project
 
-### Situation
-A leading company faced significant revenue loss due to customer churn, with an estimated churn rate of 26%. The business required a data-driven solution to identify at-risk customers and proactively reduce churn.
+## 📊 Project Overview
+This project focuses on predicting customer churn using machine learning techniques. The solution includes a predictive model, an interactive dashboard, and a web application for real-time predictions.
 
-### Task
-The objective was to:
-- Analyze a large customer dataset (over 7,000 records, 20+ features).
-- Build a predictive model to classify customers as likely to churn or not.
-- Deploy an interactive dashboard for business users to visualize churn insights and predictions.
+## ⭐ STAR Approach
 
-### Actions
-1. **Data Exploration & Preprocessing**
-   - Loaded and cleaned the dataset (`customer_churn_large_dataset.xlsx`).
-   - Handled missing values, encoded categorical variables, and performed feature engineering.
-   - Visualized key trends (e.g., churn by contract type, tenure, payment method).
+### 🎯 Situation
+- Company is facing significant customer churn issues
+- Estimated churn rate: 26%
+- Need for a proactive customer retention strategy
+- Dataset size: 7,000+ customer records
+- 20+ features including demographic and behavioral data
+
+### 📋 Task
+- Develop a machine learning model to predict customer churn
+- Create an interactive dashboard for business insights
+- Build a web application for real-time predictions
+- Identify key factors contributing to customer churn
+
+### 🛠️ Actions
+1. **Data Analysis & Preprocessing**
+   - Data cleaning and feature engineering
+   - Handling missing values and outliers
+   - Feature selection and correlation analysis
+   - Data visualization for key insights
 
 2. **Model Development**
-   - Split data into training and test sets (80:20 ratio).
-   - Trained multiple models (Logistic Regression, Random Forest, XGBoost).
-   - Selected the best model based on accuracy, precision, recall, and ROC-AUC.
+   - Implemented multiple models:
+     - Logistic Regression
+     - Random Forest
+     - XGBoost
+   - Cross-validation and hyperparameter tuning
+   - Model performance comparison
 
-3. **Evaluation**
-   - Achieved an accuracy of **82%**, precision of **79%**, recall of **75%**, and ROC-AUC of **0.86** on the test set.
-   - Identified top churn drivers: contract type, tenure, and monthly charges.
+3. **Evaluation Metrics**
+   - Accuracy: 82%
+   - Precision: 79%
+   - Recall: 75%
+   - ROC-AUC: 0.86
 
 4. **Deployment**
-   - Saved the trained model as `Model.pkl`.
-   - Developed a user-friendly dashboard (`Customer_Churn_Prediction_Dashobard.pbix`) and a web app (`app.py`) for real-time predictions.
-   - Provided a Jupyter notebook (`SanketGaikwad_ChurnPrediction.ipynb`) with full code and analysis.
+   - Saved model as `Model.pkl`
+   - Created a PowerBI dashboard
+   - Developed a Flask web application
+   - Documented code and analysis
 
-### Results
-- **Churn prediction accuracy:** 82%
-- **Business impact:** Enables targeted retention strategies, potentially reducing churn by up to 10% and saving significant revenue.
-- **Deliverables:** Clean code, interactive dashboard, and deployment-ready model.
+### 📈 Results
+- **Model Performance:** 82% accuracy in predicting churn
+- **Key Findings:**
+  - Top churn predictors: contract type, tenure, monthly charges
+  - Potential revenue impact: 10% reduction in churn rate
+- **Deliverables:**
+  - Interactive dashboard
+  - Web application
+  - Jupyter notebook with full analysis
+  - Trained model
 
----
+## 🗂️ Project Structure
+```
+├── SanketGaikwad_ChurnPrediction.ipynb    # Full analysis and code
+├── Model.pkl                              # Trained model
+├── app.py                                # Web application
+├── templates/                            # Web app templates
+├── Customer_Churn_Prediction_Dashobard.pbix  # Power BI dashboard
+├── customer_churn_large_dataset.xlsx      # Dataset
+└── Project Info.txt                      # Project documentation
+```
 
-## Repository Structure
+## 🚀 Getting Started
 
-- `SanketGaikwad_ChurnPrediction.ipynb`: Full code and analysis.
-- `Model.pkl`: Trained machine learning model.
-- `app.py`: Web app for live predictions.
-- `Customer_Churn_Prediction_Dashobard.pbix`: Power BI dashboard.
-- `customer_churn_large_dataset.xlsx`: Dataset used.
-- `Project Info.txt`: Project summary and instructions.
-
+### Prerequisites
+- Python 3.8+
+- Required packages:
+  - pandas
+  - numpy
+  - scikit-learn
+  - xgboost
+  - flask
+  - matplotlib
+  - seaborn
 
 
 
