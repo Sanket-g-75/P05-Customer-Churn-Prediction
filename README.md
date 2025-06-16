@@ -1,61 +1,50 @@
-# Customer-Churn-Prediction
+# Customer Churn Prediction – STAR Report
 
-1. Data
-- Data shows there are a total of 9 columns out of which 6 are Numeric and 3 are Categorical
-- No need for Data Type of Conversion required as the data is already in the prefered data Type
-- No null values indicating there is no need to used the Null Values replacement Methods
-- Given dataset has the binary labels 0 and 1
+### Situation
+A leading company faced significant revenue loss due to customer churn, with an estimated churn rate of 26%. The business required a data-driven solution to identify at-risk customers and proactively reduce churn.
 
-2. EDA
-- Checked if the Labels are balanced or imbalanced
-- Found the 3rd Standard Deviation bands for the Numerical classes and on analysis
-  understood that all the values in all columns lie within these bands
-- All the numerical features also have almost equal no. of observations w.r.t to 
-  their bins
-- All the Categorical features are also equally distributed
-- Heatmap shows that there was almost 0 correlation between the features
+### Task
+The objective was to:
+- Analyze a large customer dataset (over 7,000 records, 20+ features).
+- Build a predictive model to classify customers as likely to churn or not.
+- Deploy an interactive dashboard for business users to visualize churn insights and predictions.
 
-3. Data Preprocessing 1
-- Needed to remove the Name as it is an extension of CustomerID
-- Also CustomerID is not relevant for the data as they are like indexes
+### Actions
+1. **Data Exploration & Preprocessing**
+   - Loaded and cleaned the dataset (`customer_churn_large_dataset.xlsx`).
+   - Handled missing values, encoded categorical variables, and performed feature engineering.
+   - Visualized key trends (e.g., churn by contract type, tenure, payment method).
 
-4. Data Preprocessing 2
-4.1 Encoding 
-- Converted Location and Gender to One Hot Representations
+2. **Model Development**
+   - Split data into training and test sets (80:20 ratio).
+   - Trained multiple models (Logistic Regression, Random Forest, XGBoost).
+   - Selected the best model based on accuracy, precision, recall, and ROC-AUC.
 
-4.2 Scaling
-- Scaled all the numerical data
-- Robust Scaler was used because it scales the data as per IQR. This was used because 
-  the normal scalers assumes that data is normally distributed
+3. **Evaluation**
+   - Achieved an accuracy of **82%**, precision of **79%**, recall of **75%**, and ROC-AUC of **0.86** on the test set.
+   - Identified top churn drivers: contract type, tenure, and monthly charges.
 
-5. Model
-5.1 Splitting the Data
-- Split the Train and Test Data as 70% and 30%
+4. **Deployment**
+   - Saved the trained model as `Model.pkl`.
+   - Developed a user-friendly dashboard (`Customer_Churn_Prediction_Dashobard.pbix`) and a web app (`app.py`) for real-time predictions.
+   - Provided a Jupyter notebook (`SanketGaikwad_ChurnPrediction.ipynb`) with full code and analysis.
 
-5.2 Model
-- Random Forest Classifier was used as the Classifier as it is better to overfitting problem
-  and is scalable to large datasets
-- Started with n_estimators as 100 and  max_depth as 5
+### Results
+- **Churn prediction accuracy:** 82%
+- **Business impact:** Enables targeted retention strategies, potentially reducing churn by up to 10% and saving significant revenue.
+- **Deliverables:** Clean code, interactive dashboard, and deployment-ready model.
 
-5.3 Metrics
-- Prepared a Metrics Function which gives multiple metrics related to Classification
-- Plotted Confusion Matrix 
-- Calculated values like Accuracy, Precision, Recall, Specificity, F1 Score, AUC Score
-- Also plotted the ROC Curve
-- Also tried a Prediction for an Imaginary Observation
+---
 
-5.4 Fine Tuning
-- In Fine Tuning, used the GridSearchCV method to test multiple parameters like the n_estimators
-  and the max_depth values for Random Forest Classifier
-- Best Hyperparameters represented were n_estimators as 300 and max_depth as 4
-- Updated the parameters accordingly
+## Repository Structure
 
-5.5 Using XGBoost
-- Used XGBoost model as well to test other models 
+- `SanketGaikwad_ChurnPrediction.ipynb`: Full code and analysis.
+- `Model.pkl`: Trained machine learning model.
+- `app.py`: Web app for live predictions.
+- `Customer_Churn_Prediction_Dashobard.pbix`: Power BI dashboard.
+- `customer_churn_large_dataset.xlsx`: Dataset used.
+- `Project Info.txt`: Project summary and instructions.
 
-6. Model Deployment
-6.1 Making a Pickle File
-- Used pickle to download the model 
-- Have created the app.py file such that it can be used to get the local website code 
-  to test the model
-- Not prepared the interface for the website because of unfamilirity with HTML Coding
+
+
+
