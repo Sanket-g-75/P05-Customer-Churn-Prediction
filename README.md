@@ -67,18 +67,7 @@ This project focuses on predicting customer churn using machine learning techniq
 └── Project Info.txt                      # Project documentation
 ```
 
-## 🚀 Getting Started
 
-### Prerequisites
-- Python 3.8+
-- Required packages:
-  - pandas
-  - numpy
-  - scikit-learn
-  - xgboost
-  - flask
-  - matplotlib
-  - seaborn
 
 
 
